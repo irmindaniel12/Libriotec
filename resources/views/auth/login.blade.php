@@ -1,4 +1,6 @@
+@extends('layouts.estilos')
 @extends('layouts.app')
+@extends('layouts.navbarsecundario')
 
 @section('content')
 <div class="container">
