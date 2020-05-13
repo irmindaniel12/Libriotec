@@ -7,11 +7,11 @@
 
     <title>Libriotec</title>
     <!-- Styles -->
-    @extends('layouts.estilos')
+    @include('includes.estiloswelcome')
 </head>
 
 <body data-spy="scroll" data-target="#myScrollspy">
-
+    
     @extends('layouts.navbar')    
 
     <header style="background-image:url('https://c2.peakpx.com/wallpaper/714/983/647/tablet-books-desk-education-wallpaper-preview.jpg');">
@@ -81,7 +81,7 @@
 
     <section class="service-section" id="services">
         <div class="container">
-            <h3>Contador</h3>
+            <h3>Comunidad</h3>
 
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-12">
@@ -256,7 +256,7 @@
         </div>
     </section>
 
-    @extends('layouts.footer')
+    @extends('includes.footer')
 
     <!-- <div class="flex-center position-ref full-height">
             @if (Route::has('login'))

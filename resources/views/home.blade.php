@@ -1,23 +1,30 @@
-@extends('layouts.app')
+@extends('layouts.navbars')
+
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+@include('includes.estiloslibro')
 
-                    You are logged in!
-                </div>
-            </div>
+<main role="main">
+
+    <div class="container ">
+
+        <h3 class="display-4 font-italic">Libros disponibles</h3>
+        @include('includes.buscador')
+        <hr>
+
+        <div class="row mb-2">
+            @include('includes.librocard')
+            @include('includes.librocard')
+            @include('includes.librocard')
+            @include('includes.librocard')
+            @include('includes.librocard')
+            @include('includes.librocard')
+            @include('includes.librocard')
+            @include('includes.librocard')
         </div>
-    </div>
-</div>
+        <hr>
+        @include('includes.pagination')
+</main>
+@include('includes.footerdos')
 @endsection
