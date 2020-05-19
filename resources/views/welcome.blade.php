@@ -150,10 +150,10 @@
                             <li class="clearfix">
                                 <div class="member-details">
                                     <div>
-                                        <img src="http://gocheckers.com/images/roster/josh_wesley_headshot_1718.png" alt="UI Designer">
+                                        <img src="{{ asset('img/Pedro.jpg') }}" alt="Diseñador">
                                         <div class="member-info">
-                                            <h3>John Doe</h3>
-                                            <p>UI Designer</p>
+                                            <h3>Pedro Tilán</h3>
+                                            <p>Diseñador</p>
                                         </div>
                                     </div>
                                 </div>
