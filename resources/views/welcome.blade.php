@@ -165,7 +165,7 @@
 
                                 <div class="member-details">
                                     <div>
-                                        <img src="https://axis.org/wp-content/uploads/2014/10/chris-headshot.png" >
+                                        <img src="{{ asset('img/joaquin.jpg') }}" >
                                         <div class="member-info">
                                             <h3>Joaquin Lizama</h3>
                                             <p>Analista</p>
