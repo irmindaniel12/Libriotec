@@ -21,10 +21,10 @@ Auth::routes();
 /*Página principal del portal, en dónde se encuentra los libros*/
 Route::get('/home', 'HomeController@index')->name('home');
 
-/*Página pefil de usuario*/
-    /*pagina vista de datos */
-Route::get('home/perfil', 'UsuarioController@getUsuario');
-    /*pagina edicion de datos  */
-Route::get('home/Editar', 'UsuarioController@getUpdateUsuario');
-Route::post('home/Editar/Guardar','UsuarioController@Update');
-//Route::get('home/Editar/Guardar/{id}','UsuarioController@Update');
+// USUARIO
+Route::get('/configuracion', 'UserController@config')->name('config');
+Route::post('/user/update', 'UserController@update')->name('user.update');
+Route::get('/user/avatar/{filename}', 'UserController@getImage')->name('user.avatar');
+Route::get('/perfil/{id}', 'UserController@profile')->name('profile');
+Route::get('/gente/{search?}', 'UserController@index')->name('user.index');
+

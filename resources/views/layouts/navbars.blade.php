@@ -67,6 +67,7 @@
                                 <a class="nav-link" href="{{ route('register') }}" style="color: white;">{{ __('Register') }}</a>
                             </li>
                         @else
+                        @include('includes.avatar')	
                             <li class="nav-item dropdown">
 
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="color: white;">
@@ -77,12 +78,12 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
-                                <a class="dropdown-item fa fa-user" href="{{ url('/home/perfil') }}">
+                                <a class="dropdown-item fa fa-user" href="{{ route('profile', ['id' => Auth::user()->id]) }}">
 
                                         Mi perfil
                                 </a>
 
-                                <a class="dropdown-item fa fa-cog" href="{{ url('/home/Editar') }}">
+                                <a class="dropdown-item fa fa-cog" href="{{ route('config') }}">
                                 Configurar mi usuario
                                 </a>
 
