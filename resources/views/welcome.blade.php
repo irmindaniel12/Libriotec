@@ -21,7 +21,7 @@
                 <h1>Bienvenido</h1>
                 <p>Selecciona un libro y ponte en contacto con el usuario para realizar un trueque.</p>
                 <p class="dispo">
-                    <a href="#" class="text-white font-weight-bold">Ver libros disponibles</a>
+                    <a href="{{ route('home') }}" class="text-white font-weight-bold">Ver libros disponibles</a>
                 </p>
             </div>
         </div>
