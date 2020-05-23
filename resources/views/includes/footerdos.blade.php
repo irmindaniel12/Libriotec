@@ -11,11 +11,9 @@
             <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
 
                 <!-- Content -->
-                <h5 class="font-weight-bold text-uppercase mb-4" style="color: white">Footer Content</h5>
-                <p>Here you can use rows and columns to organize your footer content.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit amet numquam iure provident voluptate
-                    esse
-                    quasi, veritatis totam voluptas nostrum.</p>
+                <h5 class="font-weight-bold text-uppercase mb-4" style="color: white">Nosotros</h5>
+                <p>Somos un grupo de jóvenes que desarrolló este espacio pensando en el ámbito literario, con el fin de ser un punto de encuentro entre los lectores, para que entre ellos mismos realicen cambios de libros sin costo.</p>
+
 
             </div>
             <!-- Grid column -->
@@ -23,35 +21,7 @@
             <hr class="clearfix w-100 d-md-none">
 
             <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
 
-                <!-- Links -->
-                <h5 class="font-weight-bold text-uppercase mb-4" style="color: white">About</h5>
-
-                <ul class="list-unstyled">
-                    <li>
-                        <p>
-                            <a href="#!">PROJECTS</a>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <a href="#!">ABOUT US</a>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <a href="#!">BLOG</a>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <a href="#!">AWARDS</a>
-                        </p>
-                    </li>
-                </ul>
-
-            </div>
             <!-- Grid column -->
 
             <hr class="clearfix w-100 d-md-none">
@@ -60,7 +30,7 @@
             <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
 
                 <!-- Contact details -->
-                <h5 class="font-weight-bold text-uppercase mb-4" style="color: white">Address</h5>
+                <h5 class="font-weight-bold text-uppercase mb-4" style="color: white">Contacto</h5>
 
                 <ul class="list-unstyled">
                     <li>
@@ -69,7 +39,7 @@
                     </li>
                     <li>
                     <p>
-                        <i class="fa fa-envelope" style="color: white"></i> micorreo@gmail.com
+                        <i class="fa fa-envelope" style="color: white"></i> libriotec@gmail.com
                     </p>
                     </li>
 
@@ -89,7 +59,7 @@
             <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
 
                 <!-- Social buttons -->
-                <h5 class="font-weight-bold text-uppercase mb-4" style="color: white">Follow Us</h5>
+                <h5 class="font-weight-bold text-uppercase mb-4" style="color: white">Siguenos</h5>
 
                 <!-- Facebook -->
                 <a type="button" class="btn-floating ">

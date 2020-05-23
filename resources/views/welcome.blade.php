@@ -29,7 +29,7 @@
 
     <section class="service-section" id="services">
         <div class="container">
-            <h3>service</h3>
+            <h3>Servicio</h3>
 
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-12">
@@ -37,9 +37,8 @@
                         <div class="icon">
                             <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
                         </div>
-                        <h4><a href="#">Speed of Development</a></h4>
-                        <p>Rather than coding from scratch, Bootstrap enables you to utilize ready made blocks of code
-                            to help you get started.</p>
+                        <h4>Selecciona tu libro</h4>
+                        <p>El catálogo de libros se organiza por palabras claves de acuerdo al libro que esté buscando el cliente, incluyendo editoriales.</p>
                     </div>
                 </div>
 
@@ -48,9 +47,8 @@
                         <div class="icon">
                             <span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span>
                         </div>
-                        <h4><a href="#"> Responsiveness</a></h4>
-                        <p>Creating mobile ready websites is a breeze with Bootstrap thanks to the fluid grid layout
-                            that dynamically adjusts to the proper screen resolution.</p>
+                        <h4>Sube tu libro</h4>
+                        <p>Cada usuario no tiene un límite para subir libros a la plataforma. De igual forma se le hará fácil estar subiendo libros una vez registrado ya que solo deberá estar anexando los datos del libro que le pide el portal.</p>
                     </div>
                 </div>
 
@@ -59,8 +57,8 @@
                         <div class="icon">
                             <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
                         </div>
-                        <h4><a href="#">Consistency</a></h4>
-                        <p>Bootstrap ensures consistency regardless of who’s working on the project. </p>
+                        <h4>Espera algún interesado</h4>
+                        <p>El tiempo de respuesta es indefinido, todo va a depender del seguimiento que le dé el usuario que haya subido el libro a la página.</p>
                     </div>
                 </div>
 
@@ -69,8 +67,8 @@
                         <div class="icon">
                             <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
                         </div>
-                        <h4><a href="#">Customizable</a></h4>
-                        <p>Bootstrap can be tailor made according to the specifications of your project.</p>
+                        <h4>Llega a un acuerdo</h4>
+                        <p>El cliente puede calificar a la persona según como haya sido el trato y la calidad del libro, esto con el fin de que otras personas puedan ver la reputación que tiene cada usuario y ser libre de escoger a la persona con la que hará el intercambio. </p>
                     </div>
                 </div>
 
@@ -98,9 +96,9 @@
                                 
                             </span>
                         </div>
-                        <h4><a href="#">Usuario Registrados</a></h4>
+                        <h4>Usuario Registrados</h4>
 
-                        <p>Descripción</p>
+                        
                     </div>
                 </div>
 
@@ -111,8 +109,8 @@
                                 <h2 class="counter" aria-label="11">11</h2>
                             </span>
                         </div>
-                        <h4><a href="#"> Libros Disponibles</a></h4>
-                        <p>Descripción</p>
+                        <h4>Libros Disponibles</h4>
+                        
 
                     </div>
                 </div>
@@ -124,8 +122,8 @@
                                 <h2 class="counter" aria-label="2">2</h2>
                             </span>
                         </div>
-                        <h4><a href="#">Trueques realizados</a></h4>
-                        <p>Descripción</p>
+                        <h4>Trueques realizados</h4>
+                        
 
                     </div>
                 </div>
@@ -137,8 +135,8 @@
                                 <h2 class="counter" aria-label="3">3</h2>
                             </span>
                         </div>
-                        <h4><a href="#">Clientes satisfechos</a></h4>
-                        <p>Descripción</p>
+                        <h4>Clientes satisfechos</h4>
+                        
                     </div>
                 </div>
             </div>
@@ -251,10 +249,10 @@
                     <div class="pull-left col-md-4 sm-text-center">
                         <div class="team-overview">
                             <img src="{{ asset('img/Librioteca_textosinfondo.png') }}" alt="" width="50%">
-                            <h2>Who Are We?</h2>
-                            <a href="#">Meet the Entire Team</a>
+                            <h2>¿Quienes somos?</h2>
+                            
                             <p>
-                                <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci quae nesciunt officia! Autem, nam eum voluptatem, esse voluptatibus deleniti tempora laboriosam sequi pariatur, explicabo itaque. Fuga, deserunt? Repudiandae, neque qui.</div>
+                                <div>Somos un grupo de jóvenes que desarrolló este espacio pensando en el ámbito literario, con el fin de ser un punto de encuentro entre los lectores, para que entre ellos mismos realicen cambios de libros sin costo.</div>
                             </p>
                         </div>
                     </div><!-- /end col-md-4 -->
