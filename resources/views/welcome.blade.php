@@ -88,7 +88,14 @@
                     <div class="service-items">
                         <div class="icon">
                             <span class="glyphicon" aria-hidden="true">
-                                <h2 class="counter" aria-label="10">10</h2>
+                               
+                                <?php
+                                $conexion=mysqli_connect("libriotec.ctkwnx2kqyjz.us-east-2.rds.amazonaws.com","admin","mipassword","libriotec","3306");
+                                $query=mysqli_query($conexion,"select count(*) from users");
+                                $res=mysqli_fetch_assoc($query);                                                            
+                                echo '<h2 class="counter" aria-label="">'.$res['count(*)'].'</h2>';
+                                ?>
+                                
                             </span>
                         </div>
                         <h4><a href="#">Usuario Registrados</a></h4>
@@ -160,10 +167,11 @@
 
                                 <div class="member-details">
                                     <div>
-                                        <img src="https://axis.org/wp-content/uploads/2014/10/chris-headshot.png" alt="UI Designer">
+                                        <img src="https://axis.org/wp-content/uploads/2014/10/chris-headshot.png" >
                                         <div class="member-info">
-                                            <h3>John Doe</h3>
-                                            <p>UI Designer</p>
+                                            <h3>Joaquin Lizama</h3>
+                                            <p>Analista</p>
+                                            <p>Frontend</p>
                                         </div>
                                     </div>
                                 </div>
@@ -174,30 +182,30 @@
                             <li class="clearfix">
                                 <div class="member-details">
                                     <div>
-                                        <img src="https://axis.org/wp-content/uploads/2015/05/evan-headshot.png" alt="UI Designer">
+                                        <img src="https://scontent.fmid2-1.fna.fbcdn.net/v/t1.0-9/s960x960/36878516_390189384720449_196695723901714432_o.jpg?_nc_cat=104&_nc_sid=85a577&_nc_ohc=uWLkv49A6eQAX9qIrJG&_nc_ht=scontent.fmid2-1.fna&_nc_tp=7&oh=bb408bb6e621151e65cb4a070ebacef9&oe=5EEF0F96" >
                                         <div class="member-info">
-                                            <h3>John Doe</h3>
-                                            <p>UI Designer</p>
+                                            <h3>Jesús Poot</h3>
+                                            <p>Dev. Backend</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="member-details">
                                     <div>
-                                        <img src="http://gocheckers.com/images/roster/andrew_poturalski_headshot_1718.png" alt="UI Designer">
+                                        <img src="https://scontent.fmid2-1.fna.fbcdn.net/v/t1.0-9/p960x960/79151472_3290971884309836_556585945760006144_o.jpg?_nc_cat=111&_nc_sid=7aed08&_nc_ohc=Jf-VLFSZDd8AX_Dm-3v&_nc_ht=scontent.fmid2-1.fna&_nc_tp=6&oh=18d2e2a691bc30db5396b79d39f84df4&oe=5EEED1F0">
                                         <div class="member-info">
-                                            <h3>John Doe</h3>
-                                            <p>UI Designer</p>
+                                            <h3>Rubén Flores</h3>
+                                            <p>Analista</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="member-details">
                                     <div>
-                                        <img src="https://axis.org/wp-content/uploads/2015/12/2015-Dougie-Headshot.png" alt="UI Designer">
+                                        <img src="https://scontent.fmid2-1.fna.fbcdn.net/v/t1.0-1/p960x960/67298344_2357699830986752_7233156888504827904_o.jpg?_nc_cat=109&_nc_sid=dbb9e7&_nc_ohc=X0yrHfC8PXkAX_HKnrn&_nc_ht=scontent.fmid2-1.fna&_nc_tp=6&oh=81e4f9cee173706ea14de51ad0884e07&oe=5EF0E6FA" >
                                         <div class="member-info">
-                                            <h3>John Doe</h3>
-                                            <p>UI Designer</p>
+                                            <h3>Eduardo Garma</h3>
+                                            <p>Analista</p>
                                         </div>
                                     </div>
                                 </div>
@@ -207,30 +215,31 @@
                             <li class="clearfix">
                                 <div class="member-details">
                                     <div>
-                                        <img src="https://axis.org/wp-content/uploads/2014/10/chris-headshot.png" alt="UI Designer">
+                                        <img src="https://avatars0.githubusercontent.com/u/43019714?s=460&u=397e554c4ef4b8648d5544601fbd8ef96266237f&v=4">
                                         <div class="member-info">
-                                            <h3>John Doe</h3>
-                                            <p>UI Designer</p>
+                                            <h3>Silvia Moreno</h3>
+                                            <p>Analista</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="member-details">
                                     <div>
-                                        <img src="https://axis.org/wp-content/uploads/2014/12/jeremiah-e1418073411753.png" alt="UI Designer">
+                                        <img src="https://scontent.fmid2-1.fna.fbcdn.net/v/t1.0-9/p960x960/51020132_2300668686644431_1645197105452548096_o.jpg?_nc_cat=110&_nc_sid=7aed08&_nc_ohc=P-J-WA3LfhIAX8RMWYS&_nc_ht=scontent.fmid2-1.fna&_nc_tp=6&oh=63396d3c9b781fd2101d79ff86a8de65&oe=5EEFCA3D" alt="UI Designer">
                                         <div class="member-info">
-                                            <h3>John Doe</h3>
-                                            <p>UI Designer</p>
+                                            <h3>Erick Moo</h3>
+                                            <p>Analista</p>
+                                            <p>Frontend</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="member-details">
                                     <div>
-                                        <img src="http://gocheckers.com/images/roster/josh_wesley_headshot_1718.png" alt="UI Designer">
+                                        <img src="https://scontent.fmid2-1.fna.fbcdn.net/v/t31.0-8/p960x960/18056094_1453448704716021_5565169945469008104_o.jpg?_nc_cat=108&_nc_sid=7aed08&_nc_ohc=22wdw99yW2EAX9zLDWj&_nc_ht=scontent.fmid2-1.fna&_nc_tp=6&oh=738de69346f66a73f82e8209b9355012&oe=5EF027A8">
                                         <div class="member-info">
-                                            <h3>John Doe</h3>
-                                            <p>UI Designer</p>
+                                            <h3>Irmin Marín</h3>
+                                            <p>Dev.FullStack</p>
                                         </div>
                                     </div>
                                 </div>
@@ -258,37 +267,6 @@
 
     @extends('includes.footer')
 
-    <!-- <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div> -->
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
