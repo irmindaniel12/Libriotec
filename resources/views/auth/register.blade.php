@@ -54,7 +54,7 @@
                         </div>
                         <!-- Telefono -->
                         <div class="form-group row">
-                            <label for="Telefono" class="col-md-4 col-form-label text-md-right">{{ __('Telefono') }}</label>
+                            <label for="Telefono" class="col-md-4 col-form-label text-md-right">{{ __('Teléfono') }}</label>
 
                             <div class="col-md-6">
                                 <input id="Telefono" type="text" class="form-control{{ $errors->has('Telefono') ? ' is-invalid' : '' }}" name="Telefono" value="{{ old('Telefono') }}" required autofocus>
@@ -67,7 +67,7 @@
                         </div>
                         <!-- Nickname -->
                         <div class="form-group row">
-                            <label for="nickname" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                            <label for="nickname" class="col-md-4 col-form-label text-md-right">{{ __('Apodo') }}</label>
 
                             <div class="col-md-6">
                                 <input id="nickname" type="text" class="form-control{{ $errors->has('nickname') ? ' is-invalid' : '' }}" name="nickname" value="{{ old('nickname') }}" required autofocus>
