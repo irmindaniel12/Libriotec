@@ -21,7 +21,7 @@ Auth::routes();
 /*Página principal del portal, en dónde se encuentra los libros*/
 Route::get('/home', 'HomeController@index')->name('home');
 
-// USUARIO
+// USUARIO--
 Route::get('/configuracion', 'UserController@config')->name('config');
 Route::post('/user/update', 'UserController@update')->name('user.update');
 Route::get('/user/avatar/{filename}', 'UserController@getImage')->name('user.avatar');
