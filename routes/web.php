@@ -26,5 +26,15 @@ Route::get('/configuracion', 'UserController@config')->name('config');
 Route::post('/user/update', 'UserController@update')->name('user.update');
 Route::get('/user/avatar/{filename}', 'UserController@getImage')->name('user.avatar');
 Route::get('/perfil/{id}', 'UserController@profile')->name('profile');
-Route::get('/gente/{search?}', 'UserController@index')->name('user.index');
+
+
+// PUBLICACIÓN
+Route::get('/subir-libro', 'PublicacionController@create')->name('publicacion.create');
+Route::post('/libro/save', 'PublicacionController@save')->name('publicacion.save');
+Route::get('/libro/file/{filename}', 'PublicacionController@getImage')->name('image.file');
+Route::get('/libro/{id}', 'PublicacionController@detail')->name('publicacion.detail');
+Route::get('/libro/delete/{id}', 'PublicacionController@delete')->name('publicacion.delete');
+Route::get('/libro/editar/{id}', 'PublicacionController@edit')->name('publicacion.edit');
+Route::post('/libro/update', 'PublicacionController@update')->name('publicacion.update');
+
 
