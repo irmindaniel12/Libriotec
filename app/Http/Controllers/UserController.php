@@ -7,13 +7,14 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use App\User;
+use App\Publicacion;
 
 class UserController extends Controller
 {
 	
 	public function __construct(){
         $this->middleware('auth');
-    }
+	}
 	
 	
 	public function config(){
@@ -79,9 +80,11 @@ class UserController extends Controller
 	
 	public function profile($id){
 		$user = User::find($id);
-		
+		$publicaciones = Publicacion::orderBy('id', 'desc')->paginate(10);
+	
 		return view('user.profile', [
-			'user' => $user
+			'user' => $user,
+			'publicaciones' => $publicaciones
 		]);
 	}
 	
