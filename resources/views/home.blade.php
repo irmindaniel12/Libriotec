@@ -14,14 +14,9 @@
         <hr>
 
         <div class="row mb-2">
-            @include('includes.librocard')
-            @include('includes.librocard')
-            @include('includes.librocard')
-            @include('includes.librocard')
-            @include('includes.librocard')
-            @include('includes.librocard')
-            @include('includes.librocard')
-            @include('includes.librocard')
+        @foreach($publicaciones as $publi)
+				@include('includes.librocard',['publi'=>$publi])
+			@endforeach
         </div>
         <hr>
         @include('includes.pagination')

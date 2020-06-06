@@ -5,11 +5,11 @@
             <div class="col-md-3 col-sm-3 col-xs-12 user-profil-part pull-left">
                 <div class="row ">
                     <div class="col-md-12 col-md-12-sm-12 col-xs-12 user-image text-center">
-                    @if(Auth::user()->image)
+                        @if(Auth::user()->image)
                         <img src="{{ route('user.avatar',['filename'=>$user->image]) }}" class="rounded-circle" style="width: 100%">
-                    @else
-                    <img src="{{ asset('img/profile.webp') }}" class="rounded-circle" style="width: 100%">
-                    @endif
+                        @else
+                        <img src="{{ asset('img/profile.webp') }}" class="rounded-circle" style="width: 100%">
+                        @endif
                     </div>
 
                     <div class="col-md-12 col-sm-12 col-xs-12 user-detail-section1 text-center">
@@ -18,7 +18,7 @@
                         <p>{{'Se unió: '.\FormatTime::LongTimeFilter($user->created_at)}}</p>
 
 
-                        
+
                         <a href="{{ route('config') }}" class="btn btn-primary btn-block">Configurar mi usuario</a>
                         <button class="btn btn-primary btn-block">Publicar Libro</button>
                     </div>
@@ -48,7 +48,7 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="#historial" role="tab" data-toggle="tab"><i class=" fa fa-history"></i>Historial de Trueques</a>
                                     </li>
-                                   
+
                                 </ul>
 
                                 <!-- Tab panes -->
@@ -73,8 +73,8 @@
                                             </div>
                                         </div>
 
-                                         <!-- Apellido Materno -->
-                                         <div class="row">
+                                        <!-- Apellido Materno -->
+                                        <div class="row">
                                             <div class="col-md-6">
                                                 <strong>Apellido Materno:</strong>
                                             </div>
@@ -101,11 +101,25 @@
                                             <div class="col-md-6">
                                                 <p>{{$user->Telefono}}</p>
                                             </div>
-                                        </div>        
+                                        </div>
                                     </div>
 
                                     <div role="tabpanel" class="tab-pane fade" id="libros">
-                                        <strong>No tienes libros publicados</strong>
+                                        @foreach($publicaciones as $publi)
+
+                                        @if($publi->user_id == $user->id)
+                                        <h3 class="mb-0">{{$publi->titulo}}</h3>
+                                        <div class="mb-1 text-muted">{{$publi->autor}}</div>
+                                        <a href="{{ route('publicacion.detail', ['id' => $publi->id])}}" class="">Ver</a>
+                                        <a href="{{ route('publicacion.edit', ['id' => $publi->id]) }}" class="">Editar</a>
+                                        <a href="#" class="">Eliminar</a>
+                                        <hr>
+                                        @endif
+
+                                        @endforeach
+
+
+                                        @include('includes.pagination')
                                     </div>
 
                                     <div role="tabpanel" class="tab-pane fade" id="historial">

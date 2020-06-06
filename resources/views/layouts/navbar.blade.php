@@ -19,7 +19,12 @@
                 <li><a href="{{ url('/') }}">Inicio</a></li>
                 <li><a href="{{ url('/home') }}">Libros</a></li>
                 <li><a href="">Buscar</a></li>
-                <li><a href="">Subir Libro</a></li>
+                @guest
+                        @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/subir-libro') }}" style="color: white;">Subir Libro</a>
+                        </li>
+                        @endguest
             </ul>
             <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->

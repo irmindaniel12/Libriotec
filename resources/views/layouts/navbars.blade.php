@@ -51,9 +51,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="" style="color: white;">Buscar</a>
                         </li>
+                        @guest
+                        @else
                         <li class="nav-item">
-                            <a class="nav-link" href="" style="color: white;">Subir Libro</a>
+                            <a class="nav-link" href="{{ url('/subir-libro') }}" style="color: white;">Subir Libro</a>
                         </li>
+                        @endguest
                     </ul>
 
                     <!-- Right Side Of Navbar -->

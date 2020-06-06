@@ -106,7 +106,12 @@
                     <div class="service-items">
                         <div class="icon">
                             <span class="glyphicon " aria-hidden="true">
-                                <h2 class="counter" aria-label="11">11</h2>
+                            <?php
+                                 $conexion=mysqli_connect("libriotec.ctkwnx2kqyjz.us-east-2.rds.amazonaws.com","admin","mipassword","libriotec","3306");
+                                 $query=mysqli_query($conexion,"select count(*) from Publicaciones");
+                                 $res=mysqli_fetch_assoc($query);                                                            
+                                 echo '<h2 class="counter" aria-label="">'.$res['count(*)'].'</h2>';
+                                ?> 
                             </span>
                         </div>
                         <h4>Libros Disponibles</h4>
