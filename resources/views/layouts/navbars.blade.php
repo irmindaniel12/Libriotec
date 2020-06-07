@@ -83,11 +83,11 @@
 
                                 <a class="dropdown-item fa fa-user" href="{{ route('profile', ['id' => Auth::user()->id]) }}">
 
-                                        Mi perfil
+                                        Mi Perfil
                                 </a>
 
                                 <a class="dropdown-item fa fa-cog" href="{{ route('config') }}">
-                                Configurar mi usuario
+                                Editar Perfil
                                 </a>
 
                                 <a class="dropdown-item fa fa-book" href="">
@@ -97,7 +97,7 @@
                                 <a class="dropdown-item fa fa-sign-out" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Cerrar sesión') }}
+                                        {{ __('Cerrar Sesión') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

@@ -170,7 +170,7 @@
 
                                 <div class="member-details">
                                     <div>
-                                        <img src="{{ asset('img/joaquin.jpg') }}" >
+                                        <img src="{{ asset('img/Joaquin.png') }}" >
                                         <div class="member-info">
                                             <h3>Joaquin Lizama</h3>
                                             <p>Analista</p>
@@ -185,7 +185,7 @@
                             <li class="clearfix">
                                 <div class="member-details">
                                     <div>
-                                        <img src="https://scontent.fmid2-1.fna.fbcdn.net/v/t1.0-9/s960x960/36878516_390189384720449_196695723901714432_o.jpg?_nc_cat=104&_nc_sid=85a577&_nc_ohc=uWLkv49A6eQAX9qIrJG&_nc_ht=scontent.fmid2-1.fna&_nc_tp=7&oh=bb408bb6e621151e65cb4a070ebacef9&oe=5EEF0F96" >
+                                        <img src="{{ asset('img/Jesus.jpg') }}" >
                                         <div class="member-info">
                                             <h3>Jesús Poot</h3>
                                             <p>Dev. Backend</p>

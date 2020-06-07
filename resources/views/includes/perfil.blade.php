@@ -1,3 +1,4 @@
+
 <div class="container main-secction">
     <div class="row">
 
@@ -19,7 +20,7 @@
 
 
 
-                        <a href="{{ route('config') }}" class="btn btn-primary btn-block">Configurar mi usuario</a>
+                        <a href="{{ route('config') }}" class="btn btn-secondary btn-block">Editar Perfil</a>
                         <button class="btn btn-primary btn-block">Publicar Libro</button>
                     </div>
 
@@ -46,7 +47,7 @@
                                         <a class="nav-link" href="#libros" role="tab" data-toggle="tab"><i class="fa fa-book"></i>Libros Publicados</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#historial" role="tab" data-toggle="tab"><i class=" fa fa-history"></i>Historial de Trueques</a>
+                                        <a class="nav-link" href="#historial" role="tab" data-toggle="tab"><i class=" fa fa-history"></i>Historial de Intercambios</a>
                                     </li>
 
                                 </ul>
@@ -85,7 +86,7 @@
 
                                         <!-- Email -->
                                         <div class="row">
-                                            <div class="col-md-6">
+                                            <div class="col-md-6 Email">
                                                 <strong>Email:</strong>
                                             </div>
                                             <div class="col-md-6">
