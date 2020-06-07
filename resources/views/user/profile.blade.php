@@ -1,4 +1,11 @@
 @extends('layouts.navbars')
+<!--Alerta de Aceptar o rechasar el libro-->
+
+            @if (session('status'))
+                <div class="alert alert-success">
+                    {{ session('status') }}
+                </div>
+            @endif
 
 @section('content')
     @if ($errors->has('name'))

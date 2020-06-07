@@ -161,7 +161,7 @@
                                              <h4 class="El libro: ">EL libro {{$noti->nombre_libro}}</h4>
                                            </div>
                                            <div class="card-body">
-                                             <h1 class="card-title pricing-card-title">El usuario {{$noti->nombre_usu_pedido}}</h1>
+                                             <h1 class="card-title pricing-card-title">El usuario {{$noti->nombre_usu_pedido}} te solicito un libro</h1>
                                              <div class="btn-group" role="group" aria-label="Basic example">
                                              <form method="POST" action="{{route('valiarcambio')}}" nctype="multipart/form-data">
                                                 @csrf
