@@ -39,3 +39,4 @@ Route::post('/libro/update', 'PublicacionController@update')->name('publicacion.
 
 //para la solicitud de libros
 Route::post('/solicitors', 'PublicacionController@solicitar')->name('solicitors');
+Route::post('/valiarcambio', 'PublicacionController@valiarcambio')->name('valiarcambio');

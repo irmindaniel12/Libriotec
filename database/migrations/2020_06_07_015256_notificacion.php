@@ -16,8 +16,8 @@ class Notificacion extends Migration
         Schema::create('notificacion', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_creacion_id');
-            $table->integer('user_peticion_id');
-            $table->integer('libro_id');
+            $table->string('nombre_usu_pedido');
+            $table->string('nombre_libro');
             $table->boolean('status')->default(true);
             $table->timestamps();
         });

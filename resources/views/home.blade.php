@@ -12,6 +12,7 @@
         <h3 class="display-4 font-italic">Libros disponibles</h3>
         @include('includes.buscador')
         <hr>
+
         <div class= "alerta">
             @if (session('status'))
                 <div class="alert alert-success">
