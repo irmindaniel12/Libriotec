@@ -15,17 +15,17 @@ class PublicacionLibroTable extends Migration
     {
         Schema::create('Publicaciones', function (Blueprint $table) {
 
-            $table->increments('Id_libros');
-            $table->integer('Id_usuario')->unsigned()->nullable()->default(12);
+            $table->increments('id');
+            $table->integer('user_id')->unsigned()->nullable();
             $table->string('titulo');
-            $table->string('Description');
-            $table->string('Imagenes');
-            $table->string('Genero');
-            $table->string('Editorial');
-            $table->string('Autor');
-            $table->datetime('Fecha_Publicacion');
-            $table->integer('Numero_paginas');
-            $table->foreign('Id_usuario')->references('id')->on('users');
+            $table->string('description');
+            $table->string('image_path');
+            $table->string('genero');
+            $table->string('editorial');
+            $table->string('autor');
+            $table->datetime('fecha_publicacion');
+            $table->integer('numero_paginas');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
 
         });

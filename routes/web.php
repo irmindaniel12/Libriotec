@@ -37,4 +37,5 @@ Route::get('/libro/delete/{id}', 'PublicacionController@delete')->name('publicac
 Route::get('/libro/editar/{id}', 'PublicacionController@edit')->name('publicacion.edit');
 Route::post('/libro/update', 'PublicacionController@update')->name('publicacion.update');
 
-
+//para la solicitud de libros
+Route::post('/solicitors', 'PublicacionController@solicitar')->name('solicitors');
