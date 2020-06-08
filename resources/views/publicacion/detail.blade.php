@@ -24,7 +24,7 @@
 		<p class="card-text mb-auto"><strong>Editorial:</strong>{{$publicacion->editorial}}</p>
 
 		<br>
-		
+
 		@if(Auth::user() && Auth::user()->id == $publicacion->user->id)
 		<div class="actions">
 			<a href="{{ route('publicacion.edit', ['id' => $publicacion->id]) }}" class="btn btn-sm btn-primary">Actualizar</a>
@@ -87,6 +87,23 @@
 
 </div>
 
-<h3>¿Te interesa? Enviale una Notificación a {{$publicacion->user->name}} <a href="" class="btn btn-sm  fa fa-bell" style="font-size: 20px;">Haz click aqui!!</a></h3>
+
+                                @if (Auth::guest())
+                                    <h1>el usuario no inicio</h1>
+                                @else
+                                <form method="POST" action="{{route('solicitors')}}" nctype="multipart/form-data">
+                                    @csrf
+                                    <input type="hidden" type="number" name="user_creacion_id" value="{{$publicacion->user_id}}">
+                                    <input type="hidden" type="text" name="nombre_user_creacion" value="{{$publicacion->user->name}}">
+                                    <input type="hidden" type="number" name="user_pedido_id" value="{{auth()->user()->id}}">
+                                    <input type="hidden" type="text" name="nombre_usu_pedido" value="{{ auth()->user()->name }}">
+                                    <input type="hidden" type="text" name="nombre_libro" value="{{$publicacion->titulo}}">
+
+<h3>¿Te interesa? Enviale una Notificación a {{$publicacion->user->name}}  <button style="padding-top:0px; padding-left:0; " type="submit"  style="font-size: 20px;" class="btn btn-link"><h1 class="btn btn-sm  fa fa-bell"> Haz click aqui!!</h1></button></h3>
+
+
+
+                                 </form>
+                                @endif
 @include('includes.footerdos')
 @endsection

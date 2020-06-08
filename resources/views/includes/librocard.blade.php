@@ -27,12 +27,9 @@
                                     @csrf
                                     <input type="hidden" type="number" name="user_creacion_id" value="{{$publi->user_id}}">
                                     <input type="hidden" type="text" name="nombre_user_creacion" value="{{$publi->user->name}}">
-
                                     <input type="hidden" type="number" name="user_pedido_id" value="{{auth()->user()->id}}">
                                     <input type="hidden" type="text" name="nombre_usu_pedido" value="{{ auth()->user()->name }}">
-
                                     <input type="hidden" type="text" name="nombre_libro" value="{{$publi->titulo}}">
-
                                     <button style="padding-top:0px; padding-left:0; " type="submit" class="btn btn-link">solicitar</button>
                                  </form>
                                 @endif
