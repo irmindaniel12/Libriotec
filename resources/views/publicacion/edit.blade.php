@@ -7,7 +7,7 @@
         <div class="col-md-8">
 
 			<div class="card">
-				<div class="card-header">Editar mi imagen</div>
+				<div class="card-header">Editar mi publicación</div>
 
 
 				<div class="card-body">
