@@ -48,7 +48,7 @@
 
 						<!-- Modal body -->
 						<div class="modal-body">
-							Si eliminar esta imagen nunca podrás recuperarla, ¿estas seguro de querer borrarla?
+							Si elimina esta publicación nunca podrás recuperarla, ¿estas seguro de querer borrarla?
 						</div>
 
 						<!-- Modal footer -->

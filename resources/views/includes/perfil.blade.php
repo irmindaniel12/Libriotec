@@ -21,7 +21,8 @@
 
 
                         <a href="{{ route('config') }}" class="btn btn-secondary btn-block">Editar Perfil</a>
-                        <button class="btn btn-primary btn-block">Publicar Libro</button>
+                        <a href="{{ url('/subir-libro') }}" class="btn btn-secondary btn-block">Publicar Libro</a>
+                        
                     </div>
 
                 </div>

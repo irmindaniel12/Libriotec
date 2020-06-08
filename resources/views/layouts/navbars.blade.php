@@ -88,11 +88,7 @@
 
                                 <a class="dropdown-item fa fa-cog" href="{{ route('config') }}">
                                 Editar Perfil
-                                </a>
-
-                                <a class="dropdown-item fa fa-book" href="">
-                                Mis Libros
-                                </a>
+                                </a>                            
 
                                 <a class="dropdown-item fa fa-sign-out" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
