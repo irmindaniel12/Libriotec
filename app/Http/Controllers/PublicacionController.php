@@ -169,7 +169,9 @@ class PublicacionController extends Controller
             //Validación
 
         $validate = $this->validate($request, [
-            'id_ususario' => 'required|numeric|max:255',
+            'user_creacion_id' => 'required|numeric|max:255',
+            'nombre_user_creacion' => 'required|max:255',
+            'user_pedido_id' => 'required|numeric|max:255',
             'nombre_usu_pedido' => 'required|max:255',
             'nombre_libro' => 'required|max:255',
         ]);
@@ -177,7 +179,9 @@ class PublicacionController extends Controller
          //cargar datos
          $notificacion=new notificacion();
          $user = \Auth::user();
-         $notificacion->user_creacion_id=$request->input('id_ususario');
+         $notificacion->user_creacion_id=$request->input('user_creacion_id');
+         $notificacion->nombre_user_creacion=$request->input('nombre_user_creacion');
+         $notificacion->user_pedido_id=$request->input('user_pedido_id');
          $notificacion->nombre_usu_pedido=$request->input('nombre_usu_pedido');
          $notificacion->nombre_libro=$request->input('nombre_libro');
 
@@ -200,21 +204,21 @@ class PublicacionController extends Controller
         'status' => 'required|numeric|max:255',
     ]);
 
-    // Recoger datos
+        // Recoger datos
         $id = $request->input('id');
         $status=$request->input('status');
 
-     //cargar datos
-        $notificacion = notificacion::find($id);
-		$notificacion->status = $status;
+         //cargar datos
+            $notificacion = notificacion::find($id);
+	    	$notificacion->status = $status;
 
-      //guardar datos
-     $notificacion->update();
-     if ( $status==2) {
-        return redirect()->route('profile', ['id' => Auth::user()->id])->with('status','Aceptaste  el cambio' );
-     } else {
+          //guardar datos
+         $notificacion->update();
+         if ( $status==2) {
+            return redirect()->route('profile', ['id' => Auth::user()->id])->with('status','Aceptaste  el cambio' );
+         } else {
         return redirect()->route('profile', ['id' => Auth::user()->id])->with('status','Rechazarte el cambio' );
-     }
+    }
 
 
 

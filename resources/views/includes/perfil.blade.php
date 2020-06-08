@@ -44,13 +44,16 @@
                                         <a class="nav-link active" href="#profile" role="tab" data-toggle="tab"><i class="fa fa-info"></i> Mi Información</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#libros" role="tab" data-toggle="tab"><i class="fa fa-book"></i>Libros Publicados</a>
+                                        <a class="nav-link" href="#libros" role="tab" data-toggle="tab"><i class="fa fa-book"></i> Libros Publicados</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#historial" role="tab" data-toggle="tab"><i class=" fa fa-history"></i>Historial de Intercambios</a>
+                                        <a class="nav-link" href="#historial" role="tab" data-toggle="tab"><i class=" fa fa-history"></i> Historial de Intercambios</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#pedidos" role="tab" data-toggle="tab"><i class="fa fa-handshake-o"></i>Libros pedidos</a>
+                                        <a class="nav-link" href="#pedidos" role="tab" data-toggle="tab"><i class="fa fa-caret-square-o-down"></i> Libros pedidos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#Solicitados" role="tab" data-toggle="tab"><i class="fa fa-caret-square-o-up"></i> Libros solicitados </a>
                                     </li>
 
                                 </ul>
@@ -127,20 +130,78 @@
                                     </div>
 
                                     <div role="tabpanel" class="tab-pane fade" id="historial">
+                                        @foreach($notificacion as $noti)
+                                            @if($noti->user_creacion_id == $user->id && $noti->status>1)
 
-                                    @foreach($notificacion as $noti)
-                                        @if($noti->user_creacion_id == $user->id && $noti->status>1)
+
+                                                <div class="card mb-4 shadow-sm">
+                                                        <div class="card-header">
+                                                          <h4 class="El libro: ">EL libro {{$noti->nombre_libro}}</h4>
+                                                        </div>
+                                                        <div class="card-body">
+                                                             @if($noti->status == 2)
+                                                                 <h4 class="card-title pricing-card-title">Aceptaste el cambio con el ususario {{$noti->nombre_usu_pedido}}</h4>
+                                                             @else
+                                                                 <h4 class="card-title pricing-card-title">Rechazarte  el cambio con el ususario {{$noti->nombre_usu_pedido}}</h4>
+                                                             @endif
+                                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                         </div>
+                                                    </div>
+                                                 </div>
+
+
+
+                                            @else
+
+                                                 @if($noti->user_pedido_id == $user->id)
+
+                                                 <div class="card mb-4 shadow-sm">
+                                           <div class="card-header">
+                                             <h4 class="El libro: ">EL libro {{$noti->nombre_libro}}</h4>
+                                           </div>
+                                           <div class="card-body">
+                                             <h4 class="card-title pricing-card-title">Has solicitado un libro al usuario {{$noti->nombre_user_creacion}} </h4>
+                                                @if($noti->status==1)
+                                                @else
+                                                    @if($noti->status == 2)
+                                                        <h4 class="card-title pricing-card-title">EL intercambio del libro fue "aceptado"</h4>
+                                                    @else
+                                                        <h4 class="card-title pricing-card-title">EL intercambio del libro fue "rechazado"</h4>
+                                                    @endif
+                                                @endif
+                                             <div class="btn-group" role="group" aria-label="Basic example">
+                                            </div>
+                                           </div>
+                                         </div>
+
+
+
+
+                                                @endif
+                                            @endif
+                                        @endforeach
+                                        @include('includes.pagination')
+                                    </div>
+
+                                    <div role="tabpanel" class="tab-pane fade" id="Solicitados">
+
+                                        @foreach($notificacion as $noti)
+                                        @if($noti->user_pedido_id == $user->id)
                                         <div class="card mb-4 shadow-sm">
                                            <div class="card-header">
                                              <h4 class="El libro: ">EL libro {{$noti->nombre_libro}}</h4>
                                            </div>
                                            <div class="card-body">
-                                                @if($noti->status == 2)
-                                                    <h1 class="card-title pricing-card-title">Rechazarte el cambio con el ususario {{$noti->nombre_usu_pedido}}</h1>
+                                             <h4 class="card-title pricing-card-title">Has solicitado un libro al usuario {{$noti->nombre_user_creacion}} </h4>
+                                                @if($noti->status==1)
+                                                    <h4 class="card-title pricing-card-title">EL intercambio esta pendiente</h4>
                                                 @else
-                                                    <h1 class="card-title pricing-card-title">Aceptaste  el cambio con el ususario {{$noti->nombre_usu_pedido}}</h1>
+                                                    @if($noti->status == 2)
+                                                        <h4 class="card-title pricing-card-title">EL intercambio del libro fue "aceptado"</h4>
+                                                    @else
+                                                        <h4 class="card-title pricing-card-title">EL intercambio del libro fue "rechazado"</h4>
+                                                    @endif
                                                 @endif
-
                                              <div class="btn-group" role="group" aria-label="Basic example">
                                             </div>
                                            </div>
@@ -148,8 +209,6 @@
                                         @endif
                                         @endforeach
                                         @include('includes.pagination')
-
-
                                     </div>
 
                                     <div role="tabpanel" class="tab-pane fade" id="pedidos">
@@ -161,7 +220,7 @@
                                              <h4 class="El libro: ">EL libro {{$noti->nombre_libro}}</h4>
                                            </div>
                                            <div class="card-body">
-                                             <h1 class="card-title pricing-card-title">El usuario {{$noti->nombre_usu_pedido}} te solicito un libro</h1>
+                                             <h4 class="card-title pricing-card-title">El usuario {{$noti->nombre_usu_pedido}} te solicito un libro</h4>
                                              <div class="btn-group" role="group" aria-label="Basic example">
                                              <form method="POST" action="{{route('valiarcambio')}}" nctype="multipart/form-data">
                                                 @csrf
