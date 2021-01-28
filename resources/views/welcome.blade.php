@@ -88,7 +88,7 @@
                             <span class="glyphicon" aria-hidden="true">
                                
                                 <?php
-                                $conexion=mysqli_connect("libriotec.ctkwnx2kqyjz.us-east-2.rds.amazonaws.com","admin","mipassword","libriotec","3306");
+                                $conexion=mysqli_connect("localhost","root","","librioteca","3308");
                                 $query=mysqli_query($conexion,"select count(*) from users");
                                 $res=mysqli_fetch_assoc($query);                                                            
                                 echo '<h2 class="counter" aria-label="">'.$res['count(*)'].'</h2>';
@@ -107,7 +107,7 @@
                         <div class="icon">
                             <span class="glyphicon " aria-hidden="true">
                             <?php
-                                 $conexion=mysqli_connect("libriotec.ctkwnx2kqyjz.us-east-2.rds.amazonaws.com","admin","mipassword","libriotec","3306");
+                                 $conexion=mysqli_connect("localhost","root","","librioteca","3308");
                                  $query=mysqli_query($conexion,"select count(*) from Publicaciones");
                                  $res=mysqli_fetch_assoc($query);                                                            
                                  echo '<h2 class="counter" aria-label="">'.$res['count(*)'].'</h2>';
