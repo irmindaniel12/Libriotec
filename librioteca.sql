@@ -119,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `Telefono` bigint(20) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
-  `image_path` varchar(255) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
   `Estatus_Activo` tinyint(1) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
